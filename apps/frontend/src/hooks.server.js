@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase';
-import { serializeNonPOJOs } from '../lib/utils';
+import { serializeNonPOJOs } from './lib/utils';
 
 // Hooks are run on every request on our Sveltekit app.
 
