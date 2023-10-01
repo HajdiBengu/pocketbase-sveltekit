@@ -10,11 +10,16 @@ export const handle = async ({ event, resolve }) => {
 	// Grabs the cookie from the browser, if we have one/ Checks it and loads it in our Pocketbase's authStore so we can use it.
 	event.locals.pb.authStore.loadFromCookie(event.request.headers.get('cookie') || '');
 
-	// If it is valid, serializes the model and sets it to our user.
-	//If it's not valid, sets the user to undefined.
-	if (event.locals.pb.authStore.isValid) {
-		event.locals.user = serializeNonPOJOs(event.locals.pb.authStore.model);
-	} else {
+	// If it is valid, refreshes it, so that a malicious actor cannot hack it via the browser,
+	// then serializes the model and sets it to our user.
+	try {
+		if (event.locals.pb.authStore.isValid) {
+			await event.locals.pb.collection('users').authRefresh();
+			event.locals.user = serializeNonPOJOs(event.locals.pb.authStore.model);
+		}
+		//If it's not valid, clears the cookie (which logs the user out) and sets the user to undefined.
+	} catch (_) {
+		event.locals.pb.authStore.clear();
 		event.locals.user = undefined;
 	}
 
