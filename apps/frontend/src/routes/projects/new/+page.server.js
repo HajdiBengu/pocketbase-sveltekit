@@ -1,25 +1,37 @@
-import { error, redirect } from '@sveltejs/kit';
+import { error, fail, redirect } from '@sveltejs/kit';
+import { serialize } from 'object-to-formdata';
+import { createProjectSchema } from '$lib/schemas';
+import { validateData } from '$lib/utils';
 
-// Load function to protect the route from unauthorized users
 export const load = ({ locals }) => {
 	if (!locals.pb.authStore.isValid) {
 		throw redirect(303, '/login');
 	}
 };
 
-// Form action to add a new project in Pocketbase
 export const actions = {
 	create: async ({ request, locals }) => {
-		const formData = await request.formData();
+		const body = await request.formData();
 
-		const thumbnail = formData.get('thumbnail');
+		const thumb = body.get('thumbnail');
 
-		if (thumbnail.size === 0) {
-			formData.delete('thumbnail');
+		if (thumb.size === 0) {
+			body.delete('thumbnail');
 		}
-		formData.append('user', locals.user.id);
+		body.append('user', locals.user.id);
+
+		const { formData, errors } = await validateData(body, createProjectSchema);
+		const { thumbnail, ...rest } = formData;
+
+		if (errors) {
+			return fail(400, {
+				data: rest,
+				errors: errors.fieldErrors
+			});
+		}
+
 		try {
-			await locals.pb.collection('projects').create(formData);
+			await locals.pb.collection('projects').create(serialize(formData));
 		} catch (err) {
 			console.log('Error: ', err);
 			throw error(err.status, err.message);
