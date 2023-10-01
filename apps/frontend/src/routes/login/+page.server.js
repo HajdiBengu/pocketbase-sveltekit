@@ -4,10 +4,8 @@ import { loginUserSchema } from '$lib/schemas';
 
 export const actions = {
 	login: async ({ request, locals }) => {
-		// Validates with zod
 		const { formData, errors } = await validateData(await request.formData(), loginUserSchema);
 
-		// If there's any validation errors, throws them here
 		if (errors) {
 			return fail(400, {
 				data: formData,
@@ -15,7 +13,6 @@ export const actions = {
 			});
 		}
 
-		// If there's no validation errors, authenticates with Pocketbase
 		try {
 			await locals.pb.collection('users').authWithPassword(formData.email, formData.password);
 			if (!locals.pb?.authStore?.model?.verified) {
@@ -26,7 +23,7 @@ export const actions = {
 			}
 		} catch (err) {
 			console.log('Error: ', err);
-			throw error(500, 'Something went wrong logging in');
+			throw error(err.status, err.message);
 		}
 
 		throw redirect(303, '/');
