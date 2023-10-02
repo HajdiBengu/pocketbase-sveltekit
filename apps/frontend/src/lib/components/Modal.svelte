@@ -1,3 +1,5 @@
+// Simple modal component that can be toggled to show and hide
+
 <script>
 	export let label;
 	export let checked;
