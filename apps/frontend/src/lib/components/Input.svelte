@@ -1,3 +1,5 @@
+// Input field component. Takes in the props below to customize its look. Also takes in errors to show them  below the input field if validation or authentication throws errors.
+
 <script>
 	export let value = '';
 	export let placeholder = '';
