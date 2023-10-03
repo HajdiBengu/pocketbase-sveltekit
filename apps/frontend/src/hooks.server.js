@@ -5,7 +5,7 @@ import { serializeNonPOJOs } from './lib/utils';
 
 export const handle = async ({ event, resolve }) => {
 	// This hook initiates a new Pocketbase instance.
-	event.locals.pb = new PocketBase('http://127.0.0.1:8090/');
+	event.locals.pb = new PocketBase('https://pocketbase-sveltekit.pockethost.io');
 
 	// Grabs the cookie from the browser, if we have one/ Checks it and loads it in our Pocketbase's authStore so we can use it.
 	event.locals.pb.authStore.loadFromCookie(event.request.headers.get('cookie') || '');
