@@ -51,8 +51,7 @@ This is a list of the most useful (but not all) features of the app:
 
 ![](https://lh5.googleusercontent.com/_4Mb0LfuzemCn_6IPZcrvLmHBI5pE_dpaQw74rHluZ1fuN8OvYsq26ZHSqCANAXsPEflduMZfGsryMZ2HvRtaOOSEAIopTR7LTL36L2M_F1KAl-Vr3ejzVYNxBmfdxYvRtAy4gQjTK-exXoopkKcvTM)
 
-![](https://lh3.googleusercontent.com/hXbyudwI73udJEJkcWGxobCKyFZ3sGOcplwZWH5mdB-smyiPSvs0-v6s1wiyXOppUuFfqc694dbac_u30vcywFdwkOKNUFqojwpqNTbmMtWT0pZ14XBGWMom--DRMH_mg1zcdTGA9WbqnsZYVSjKbj8)![](https://lh3.googleusercontent.com/wbYflmgSRXekoroEaMxfWKn8-hVrrejikjkQnnyAtOcWBAiP5clD0eZt08NTJKihdvHWSefAQj8gc3Flk-z_FzDz-mHEltTWK5gdB5GepLVqove-o8z3U6ddtbt3rgFF4HFJ2cJ1D6QLKgGlPvOz3gU)
-
+![](https://lh3.googleusercontent.com/hXbyudwI73udJEJkcWGxobCKyFZ3sGOcplwZWH5mdB-smyiPSvs0-v6s1wiyXOppUuFfqc694dbac_u30vcywFdwkOKNUFqojwpqNTbmMtWT0pZ14XBGWMom--DRMH_mg1zcdTGA9WbqnsZYVSjKbj8)
 ## [Setup & Usage](https://github.com/HajdiBengu/pocketbase-sveltekit/#setup-&-usage)
 
   
