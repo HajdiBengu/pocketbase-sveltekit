@@ -121,19 +121,19 @@ Because I have hosted my Pocketbase instance online, there are a couple of thing
 
 Inside ***src***, open ***hooks.server.js*** and update line 8:
 
-    event.locals.pb = new PocketBase('[https://pocketbase-sveltekit.pockethost.io](https://pocketbase-sveltekit.pockethost.io)');
-
-to
-
-    event.locals.pb = new PocketBase('[http://127.0.0.1:8090/](http://127.0.0.1:8090/)’);
+>     event.locals.pb = new PocketBase('[https://pocketbase-sveltekit.pockethost.io](https://pocketbase-sveltekit.pockethost.io)');
+> 
+> to
+> 
+>     event.locals.pb = new PocketBase('[http://127.0.0.1:8090/](http://127.0.0.1:8090/)’);
 
 Inside ***src/lib***, open ***utils.js*** and update line 13:
 
-    return [https://pocketbase-sveltekit.pockethost.io/api/files/${collectionId}/${recordId}/${fileName}?thumb=${size](https://pocketbase-sveltekit.pockethost.io/api/files/$%7BcollectionId%7D/$%7BrecordId%7D/$%7BfileName%7D?thumb=$%7Bsize)}`;
-
-to
-
-    return [http://localhost:8090/api/files/${collectionId}/${recordId}/${fileName}?thumb=${size](http://localhost:8090/api/files/$%7BcollectionId%7D/$%7BrecordId%7D/$%7BfileName%7D?thumb=$%7Bsize)};
+>     return [https://pocketbase-sveltekit.pockethost.io/api/files/${collectionId}/${recordId}/${fileName}?thumb=${size](https://pocketbase-sveltekit.pockethost.io/api/files/$%7BcollectionId%7D/$%7BrecordId%7D/$%7BfileName%7D?thumb=$%7Bsize)}`;
+> 
+> to
+> 
+>     return [http://localhost:8090/api/files/${collectionId}/${recordId}/${fileName}?thumb=${size](http://localhost:8090/api/files/$%7BcollectionId%7D/$%7BrecordId%7D/$%7BfileName%7D?thumb=$%7Bsize)};
 
 Your app is ready to run. Don’t forget to run the Pocketbase server while you try to interact with the app. Open the CLI inside the frontend directory and run
 
@@ -158,7 +158,7 @@ Please, don’t hesitate to contact me if you see any aspects of the project tha
 
 Created by [HajdiBengu](https://github.com/HajdiBengu) - feel free to contact me at:
 
-hajdibengu@protonmail.com
-[LinkedIn](https://www.linkedin.com/in/hajdi-bengu/)
-[Braintrust](https://app.usebraintrust.com/talent/261507/)
-[Contribute](https://www.contribute.xyz/Hajdi)
+hajdibengu@protonmail.com, 
+[LinkedIn](https://www.linkedin.com/in/hajdi-bengu/), 
+[Braintrust](https://app.usebraintrust.com/talent/261507/), 
+[Contribute](https://www.contribute.xyz/Hajdi), 
