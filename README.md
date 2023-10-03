@@ -1,6 +1,6 @@
 # [Pocketbase SvelteKit Template](https://github.com/HajdiBengu/pocketbase-sveltekit/#pocketbase-sveltekit-template)
 
-[SvelteKit](https://kit.svelte.dev/) frontend + [Pocketbase](https://pocketbase.io/) backend. Live demo [here]((https://pocketbase-sveltekit.vercel.app/).
+[SvelteKit](https://kit.svelte.dev/) frontend + [Pocketbase](https://pocketbase.io/) backend. Live demo [here](https://pocketbase-sveltekit.vercel.app/).
 
 ## [Table of Contents](https://github.com/HajdiBengu/pocketbase-sveltekit/#table-of-contents)
 
