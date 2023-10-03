@@ -1,3 +1,5 @@
+// Similar to our Input component, only uses a textarea input field that needs to be handled differently.
+
 <script>
 	export let value = '';
 	export let placeholder = '';
