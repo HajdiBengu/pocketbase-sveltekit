@@ -1,9 +1,9 @@
-// Simple Card component that shows our projects in the homepage. Uses the getImageURL function to display the project image and takes in a project object to display additional info.
-
 <script>
 	import { getImageURL } from '$lib/utils';
 	export let project;
 </script>
+
+<!-- Simple Card component that shows our projects in the homepage. Uses the getImageURL function to display the project image and takes in a project object to display additional info. -->
 
 <div class="card w-72 bg-base-100 shadow-xl">
 	<figure>

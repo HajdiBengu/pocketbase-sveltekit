@@ -1,5 +1,3 @@
-// Simple modal component that can be toggled to show and hide
-
 <script>
 	export let label;
 	export let checked;
@@ -8,6 +6,8 @@
 <label for={label}>
 	<slot name="trigger" />
 </label>
+
+<!-- Simple modal component that can be toggled to show and hide -->
 
 <input type="checkbox" id={label} class="modal-toggle" {checked} />
 <label for={label} class="modal modal-bottom sm:modal-middle">

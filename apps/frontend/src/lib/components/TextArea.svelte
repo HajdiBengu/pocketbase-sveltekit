@@ -1,5 +1,3 @@
-// Similar to our Input component, only uses a textarea input field that needs to be handled differently.
-
 <script>
 	export let value = '';
 	export let placeholder = '';
@@ -11,6 +9,8 @@
 
 	export let errors;
 </script>
+
+<!-- Similar to our Input component, only uses a textarea input field that needs to be handled differently. -->
 
 <div class="form-control w-full max-w-lg">
 	<label for={id} class="label font-medium pb-1">
