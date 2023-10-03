@@ -1,6 +1,6 @@
 # [Pocketbase SvelteKit Template](https://github.com/HajdiBengu/pocketbase-sveltekit/#pocketbase-sveltekit-template)
 
-[SvelteKit](https://kit.svelte.dev/) frontend + [Pocketbase](https://pocketbase.io/) backend. Live demo [here](https://www.example.com).
+[SvelteKit](https://kit.svelte.dev/) frontend + [Pocketbase](https://pocketbase.io/) backend. Live demo [here]((https://pocketbase-sveltekit.vercel.app/).
 
 ## [Table of Contents](https://github.com/HajdiBengu/pocketbase-sveltekit/#table-of-contents)
 
@@ -56,7 +56,7 @@ This is a list of the most useful (but not all) features of the app:
 
   
 
-I have set up a live demo on [Vercel](ww). I have also hosted an instance of Pocketbase on [Pockethost](https://pockethost.io/). You can use the live demo by logging in with the account I have set up. Contact me at [hajdibengu@protonmail.com](mailto:hajdibengu@protonmail.com) for credentials.
+I have set up a live demo on [Vercel](https://pocketbase-sveltekit.vercel.app/). I have also hosted an instance of Pocketbase on [Pockethost](https://pockethost.io/). You can use the live demo by logging in with the account I have set up. Contact me at [hajdibengu@protonmail.com](mailto:hajdibengu@protonmail.com) for credentials.
 
 There’s not much you can do with one account though, since routes are protected and many functionalities use email verification to authenticate. You can set up your own instance of this app on your local machine by following the instructions below:
 
